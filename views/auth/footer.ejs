@@ -1,0 +1,41 @@
+<script src="/js/bootstrap.min.js"></script>
+
+    <!--===============================================================================================-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.all.min.js"></script>
+    <% if (typeof msg != 'undefined') {
+      if(msg.length !== 0) { %>
+        <script>
+          Swal.fire(
+            'Waduh...',
+            '<%= msg %>',
+            'error'
+          )
+        </script>
+      <% } 
+    }%>
+    
+    <% if (typeof belumLogin != 'undefined') {
+      if(belumLogin.length !== 0) { %>
+        <script>
+          Swal.fire(
+            'Waduh...',
+            '<%= belumLogin %>',
+            'error'
+          )
+        </script>
+      <% } 
+    }%>
+
+    <% if (typeof logout != 'undefined') {
+      if(logout.length !== 0) { %>
+        <script>
+          Swal.fire(
+            'Berhasil',
+            '<%= logout %>',
+            'success'
+          )
+        </script>
+      <% } 
+    }%>
+</body>
+</html>

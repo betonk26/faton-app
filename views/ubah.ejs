@@ -1,0 +1,46 @@
+<%- include('auth/header') %>
+
+<div class="container-fluid">
+  <div class="row justify-content-center mt-5">
+      <div class="col-md-4">
+          <div class="card">
+  <h4 class="text-center mb-2 mt-2">Ubah Inventori</h4>
+  <div class="card-body">
+
+
+
+
+
+
+
+<form action="/ubah/update" method="post" autocomplete="off">
+    <input type="hidden" name="_id" value="<%= inventori._id %>">
+    <input type="hidden" class="form-control" id="oldKode" name='oldKode' value='<%= inventori.kode %>'>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode" value="<%= inventori.kode %>" required>
+      <label for="kode">Kode</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" value="<%= inventori.nama %>" required>
+      <label for="nama">Nama </label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="Jumlah" value="<%= inventori.jumlah %>" required>
+        <label for="nama">Jumlah </label>
+      </div>
+    <div class="form-floating mb-3">
+      <textarea class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan" style="height:100px;" required><%= inventori.keterangan %></textarea>
+      <label for="keterangan" class="form-label">Harga</label>
+    </div>
+    <a href="/inventori" class="btn btn-outline-dark "><i class="fas fa-long-arrow-alt-left"></i> Kembali</a>
+    <button type="submit" class="btn btn-dark float-end"><i class="fas fa-save"></i> Simpan</button>
+    
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+  <%- include('auth/footer') %>

@@ -1,0 +1,28 @@
+<%- include('auth/header') %>
+
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header bg-transparent mb-0"><h5 class="text-center">LOGIN</h5></div>
+              <div class="card-body">
+                <form action="/" method="post" autocomplete="off">
+                  <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="Username">
+                  </div>
+                  <div class="mt-4"></div>
+                  <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="mt-4"></div>
+                  <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-dark col-lg-12 mx-auto">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<%- include('auth/footer') %>

@@ -1,0 +1,45 @@
+<!-- include header -->
+<%- include('auth/header') %>
+
+<div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-4">
+            <div class="card">
+    <h4 class="text-center mb-2 mt-2">Tambah Inventori</h4>
+    <div class="card-body">
+
+
+
+
+<form action="/inventori" method="post" autocomplete="off">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="kode" name="kode" placeholder="Kode" required autofocus>
+      <label for="kode">Kode</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama" required>
+      <label for="nama">Nama</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="jumlah" name="jumlah" placeholder="Jumlah" required>
+      <label for="nama">Jumlah</label>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea style="height:100px;" class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan" required></textarea>
+      <label for="keterangan">Harga</label>
+    </div>
+    <a href="/inventori" class="btn btn-outline-dark float-start"><i class="fas fa-long-arrow-alt-left"></i> Kembali</a>
+    <button type="submit" class="btn btn-dark float-end"><i class="fas fa-save"></i> Simpan</button>
+  </form>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- include footer -->
+
+<%- include('auth/footer') %>
